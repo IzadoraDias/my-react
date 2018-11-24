@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
+import Pagina from './Components/Pagina'
+
 
 const element = <h1>ELEMENTO EM UMA VARIÁVEL</h1>
 
@@ -33,4 +35,4 @@ class ElementoComClasse extends Component{
     }
 }
 
-ReactDOM.render(<ElementoComClasse />, document.getElementById('root'));
+ReactDOM.render(<Pagina/>, document.getElementById('root'));
