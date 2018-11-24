@@ -1,12 +1,36 @@
-import React from 'react';
+import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
-import * as serviceWorker from './serviceWorker';
 
-ReactDOM.render(<App />, document.getElementById('root'));
+const element = <h1>ELEMENTO EM UMA VARIÁVEL</h1>
 
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: http://bit.ly/CRA-PWA
-serviceWorker.unregister();
+
+const ElementoComFuncao = () => {
+    return <h1>HTML dentro de uma função</h1>
+}
+
+const ElementoComFuncao2 = () => {
+    return (
+    <div>
+        <h1>linha 1</h1>
+        <h2>linha 2</h2>
+    </div>
+    )
+}
+
+//na classe da pra usar os states
+class ElementoComClasse extends Component{
+    render = () => {
+        return (
+            <div>
+                <h1>Uma classe</h1>
+                <button>click Me!</button>
+                <ElementoComFuncao2/>
+                {element}
+            </div>
+        )
+
+    }
+}
+
+ReactDOM.render(<ElementoComClasse />, document.getElementById('root'));
